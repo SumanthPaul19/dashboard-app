@@ -1,9 +1,9 @@
-Dashboard App
+# Dashboard App
 
 This project is a personal dashboard application built using the MERN stack (MongoDB, Express, React, Node.js). It allows users to register, login, create and manage notes, and upload/download documents. It also includes functionality to edit and delete notes and documents, providing a storage solution for personal notes and files.
 
-Start the application based on your path [It starts the UI](Ex: \dashboard-app\ ) : npm start 
-Start the backend server based on your path(Ex:\dashboard-app\backend\ ) : node server.js
+# Start the application based on your path [It starts the UI](Ex: \dashboard-app\ ) : npm start 
+# Start the backend server based on your path(Ex:\dashboard-app\backend\ ) : node server.js
 
 Project Setup
 Prerequisites
