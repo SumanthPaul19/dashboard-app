@@ -34,7 +34,7 @@ mongoose
   });
 
 // Serve Frontend
-const buildPath = path.join(__dirname, "build");
+const buildPath = path.join(__dirname, "../build");
 app.use(express.static(buildPath));
 
 // Catch-All Route to Serve React Frontend
