@@ -12,6 +12,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "heroku": "^8.7.1",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.11.0",
     "mongoose": "^8.8.4",
@@ -36,10 +37,9 @@
     ]
   },
   "engines": {
-  "node": "18.x",
-  "npm": "8.x"
+    "node": "20.x",
+    "npm": "10.x"
   },
-
   "browserslist": {
     "production": [
       ">0.2%",
