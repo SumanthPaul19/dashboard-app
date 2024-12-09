@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Note = require('../models/Note'); // Assuming you have a Note model
+const Note = require('../models/Note');
 
 // Create a note
 router.post('/', async (req, res) => {

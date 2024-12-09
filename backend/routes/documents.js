@@ -10,7 +10,7 @@ const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     const uploadDir = path.join(__dirname, '..', 'uploads');
     if (!fs.existsSync(uploadDir)) {
-      fs.mkdirSync(uploadDir); // Ensure the uploads directory exists
+      fs.mkdirSync(uploadDir); 
     }
     cb(null, uploadDir);
   },
@@ -59,8 +59,8 @@ router.get('/download/:id', async (req, res) => {
       return res.status(404).json({ message: 'Document not found' });
     }
 
-    const filePath = path.resolve(__dirname, '..', document.filePath); // Ensure correct absolute path
-    console.log('Downloading file:', filePath); // Log file path for debugging
+    const filePath = path.resolve(__dirname, '..', document.filePath);
+    console.log('Downloading file:', filePath);
 
     res.download(filePath, document.fileName, (err) => {
       if (err) {
@@ -82,8 +82,8 @@ router.delete('/:id', async (req, res) => {
       return res.status(404).json({ message: 'Document not found' });
     }
 
-    const filePath = path.resolve(__dirname, '..', document.filePath); // Ensure correct absolute path
-    console.log('Deleting file:', filePath); // Log file path for debugging
+    const filePath = path.resolve(__dirname, '..', document.filePath);
+    console.log('Deleting file:', filePath); 
 
     // Delete the file from the filesystem
     fs.unlink(filePath, async (err) => {

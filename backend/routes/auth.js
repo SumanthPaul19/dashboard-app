@@ -14,14 +14,14 @@ router.post('/register', async (req, res) => {
       return res.status(400).json({ msg: 'User already exists' });
     }
 
-    // Hash password
+    // Hash password(Security)
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // Create new user
     const newUser = new User({
       firstName,
       lastName,
-      email: email.toLowerCase(), // Store email in lowercase
+      email: email.toLowerCase(), 
       contact,
       password: hashedPassword,
     });
@@ -61,7 +61,7 @@ router.post('/login', async (req, res) => {
 
     // Return user data excluding the password
     const { password: _, ...userData } = user._doc;
-    return res.json({ user: userData }); // Send user data excluding password
+    return res.json({ user: userData }); 
   } catch (err) {
     console.error(err);
     return res.status(500).json({ msg: 'Server error' });

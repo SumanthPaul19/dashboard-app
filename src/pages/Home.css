@@ -1,6 +1,5 @@
    .home-container {
     padding: 20px;
-    /* background-image:url(../Spider.jpg) */
   }
   
   .content-container {
@@ -12,7 +11,7 @@
 
   
   .notes-section, .documents-section {
-    width: 48%; /* Each section takes up half of the page */
+    width: 48%; 
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;

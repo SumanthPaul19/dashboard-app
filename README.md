@@ -56,20 +56,6 @@ Storage: Notes and documents are securely stored in MongoDB.
 Folder Structure
 The project structure follows the standard MERN stack separation of concerns:
 
-plaintext
-Copy code
-dashboard-app/
-├── backend/                 # Contains the backend Express server and API
-│   ├── models/              # Mongoose models (User, Note, Document)
-│   ├── routes/              # API routes (auth.js, notes.js, documents.js)
-│   ├── uploads/             # Folder to store uploaded documents
-│   └── server.js            # Express server entry point
-├── src/                     # Contains the frontend React application
-│   ├── components/          # Reusable UI components (Header, Footer, etc.)
-│   ├── pages/               # Application pages (Login, Register, Home, etc.)
-│   ├── App.js               # Main App entry point
-│   └── index.js             # React entry point
-└── .env                     # Environment variables for backend (not pushed to Git)
 
 
 API Endpoints

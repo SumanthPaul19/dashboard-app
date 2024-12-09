@@ -6,9 +6,9 @@ function Header({ user, setUser }) {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem('user'); // Clear user info from local storage
-    setUser(null); // Clear user state
-    navigate('/login', { replace: true }); // Redirect to login page
+    localStorage.removeItem('user'); 
+    setUser(null); 
+    navigate('/login', { replace: true }); 
   };
 
   return (

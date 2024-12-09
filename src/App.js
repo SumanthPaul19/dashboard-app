@@ -7,7 +7,7 @@ import LandingPage from './pages/LandingPage';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-// Helper function to safely retrieve user data from localStorage
+
 function getUserFromLocalStorage() {
   const user = localStorage.getItem('user');
   if (user) {
@@ -22,14 +22,14 @@ function getUserFromLocalStorage() {
 }
 
 function App() {
-  const [user, setUser] = useState(null); // Initially null, prevent re-renders
+  const [user, setUser] = useState(null); 
 
   useEffect(() => {
     const storedUser = getUserFromLocalStorage();
     if (storedUser) {
-      setUser(storedUser); // Update the user state with the user from localStorage
+      setUser(storedUser); 
     }
-  }, []); // Run only once on component mount
+  }, []); 
 
   return (
     <Router>

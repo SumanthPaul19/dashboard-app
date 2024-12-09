@@ -11,7 +11,7 @@ function Home() {
   const [isEditing, setIsEditing] = useState(null);
   const [editNote, setEditNote] = useState('');
   const navigate = useNavigate();
-  const fileInputRef = useRef(null);  // Add a reference to the file input
+  const fileInputRef = useRef(null);  
 
   const user = JSON.parse(localStorage.getItem('user'));
 
@@ -70,8 +70,8 @@ function Home() {
           },
         });
         setFilesList([...filesList, response.data]);
-        setFile(null);  // Clear the file state
-        fileInputRef.current.value = '';  // Clear the file input field after upload
+        setFile(null); 
+        fileInputRef.current.value = '';  
       } catch (error) {
         console.error('Error uploading document:', error);
       }
@@ -192,7 +192,7 @@ function Home() {
           <input
             type="file"
             onChange={(e) => setFile(e.target.files[0])}
-            ref={fileInputRef}  // Attach the file input ref here
+            ref={fileInputRef}  
           />
           <button onClick={handleSaveFile}>Upload Document</button>
 

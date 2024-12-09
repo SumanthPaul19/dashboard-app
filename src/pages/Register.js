@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import './Register.css';
 
 function Register() {
@@ -13,7 +13,7 @@ function Register() {
   });
 
   const [errors, setErrors] = useState({});
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -79,20 +79,20 @@ function Register() {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(formData), // Send form data
+          body: JSON.stringify(formData), 
         });
 
-        const data = await response.json(); // Parse response data
+        const data = await response.json(); 
 
         if (response.ok) {
           alert("Registration Successful!");
-          navigate("/login"); // Navigate to login page
+          navigate("/login"); 
         } else {
-          alert(data.msg || 'Registration failed!'); // Show error message
+          alert(data.msg || 'Registration failed!');
         }
       } catch (err) {
         console.error(err);
-        alert("There was an error during registration!"); // Handle errors
+        alert("There was an error during registration!"); 
       }
     } else {
       alert("Please correct the errors in the form");

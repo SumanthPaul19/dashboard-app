@@ -23,15 +23,15 @@ function Login({ setUser }) {
       const data = await response.json();
 
       if (response.ok) {
-        localStorage.setItem('user', JSON.stringify(data.user)); // Save user in localStorage
-        setUser(data.user); // Update user state in App.js
-        navigate('/home'); // Redirect to home page
+        localStorage.setItem('user', JSON.stringify(data.user));
+        setUser(data.user); 
+        navigate('/home');
       } else {
-        setError(data.msg); // Show error message
+        setError(data.msg);
       }
     } catch (err) {
       console.error(err);
-      setError('There was an error logging in!'); // Handle errors
+      setError('There was an error logging in!');
     }
   };
 
